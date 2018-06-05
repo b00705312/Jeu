@@ -30,7 +30,7 @@ app.post('/game', function (req, res) {
             winningUser = "user 1";
         }
         if (userShape2 === userShape1) {
-            winningUser = "No one";
+            winningUser = "no one";
         }
         else {
             winningUser ="User 2";
