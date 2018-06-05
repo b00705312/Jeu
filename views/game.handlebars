@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Please play the game</h1>
+        </div>
+        <div class="col-12">
+            {{#if post}}
+                User 1 chose {{userShape1}} and User 2 chose {{userShape2}}.
+                The winner is {{winningUser}}.
+                
+            {{/if}}
+            {{#unless post}}
+                <form action="/game" method="post">
+                    <div class="form-group">
+                        <label for="userShape1">Shape for user 1</label>
+                        <select name="userShape1">
+                                <option>Rock</option>
+                                <option>Scissors</option>
+                                <option>Paper</option>
+                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="userShape2">Shape for user 2</label>
+                        <select  name="userShape2">
+                                <option>Rock</option>
+                                <option>Scissors</option>
+                                <option>Paper</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            {{/unless}}
+        </div>
+    </div>
+</div>
+              
